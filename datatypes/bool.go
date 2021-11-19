@@ -46,3 +46,11 @@ func (v Bool) MarshalJSON() ([]byte, error) {
 func (v *Bool) UnmarshalJSON(data []byte) (err error) {
 	return v.UnmarshalText(data)
 }
+
+func (v Bool) True() bool {
+	return v == BOOL_TRUE
+}
+
+func (v Bool) False() bool {
+	return v == BOOL_FALSE
+}
